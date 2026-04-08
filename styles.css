@@ -464,7 +464,8 @@ a { text-decoration: none; color: inherit; }
 .pc-swiggy::before { background: #FC8019; }
 .pc-whatsapp { background: #F0FFF4; border: 1.5px solid rgba(37,211,102,0.20); grid-column: span 2; }
 .pc-whatsapp::before { background: #25D366; }
-.pc-logo { font-size: 32px; margin-bottom: 10px; }
+.pc-logo { font-size: 32px; margin-bottom: 10px; line-height: 0; }
+.pc-logo svg { display: block; }
 .pc-name {
   font-family: 'Playfair Display', serif;
   font-size: 18px; font-weight: 700; margin-bottom: 4px;
@@ -476,9 +477,10 @@ a { text-decoration: none; color: inherit; }
 .pc-cta {
   margin-top: auto; padding: 10px 18px; border-radius: 50px;
   font-size: 13px; font-weight: 800; color: #fff;
-  display: inline-flex; align-items: center; gap: 6px;
+  display: inline-flex; align-items: center; gap: 8px;
   align-self: flex-start; transition: all .3s;
 }
+.pc-cta svg { flex-shrink: 0; }
 .pc-zomato .pc-cta { background: #E23744; }
 .pc-swiggy .pc-cta { background: #FC8019; }
 .pc-whatsapp .pc-cta { background: #25D366; }
@@ -851,11 +853,20 @@ footer {
   .reviews-grid { grid-template-columns: 1fr; }
   .special-banner { flex-direction: column; text-align: center; gap: 20px; }
   .footer-grid { grid-template-columns: 1fr; }
+  /* Order cards: 1 per row, 3 rows on mobile */
+  .order-platforms { grid-template-columns: 1fr; gap: 14px; }
+  .pc-whatsapp { grid-column: auto; flex-direction: row; align-items: center; gap: 16px; }
+  .pc-whatsapp .pc-logo { font-size: 32px; margin-bottom: 0; }
+  .platform-card { padding: 22px 18px; border-radius: 16px; }
+  .pc-cta { width: 100%; justify-content: center; }
 }
 @media (max-width: 480px) {
   .dishes-grid { grid-template-columns: 1fr; }
-  .order-platforms { grid-template-columns: 1fr; }
-  .pc-whatsapp { flex-direction: column; }
+  .order-platforms { grid-template-columns: 1fr; gap: 12px; }
+  .pc-whatsapp { grid-column: auto; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .pc-whatsapp .pc-logo { margin-bottom: 0; }
+  .platform-card { padding: 18px 16px; border-radius: 14px; }
+  .pc-cta { width: 100%; justify-content: center; padding: 10px 18px; font-size: 13px; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .hero-meta { flex-direction: column; align-items: flex-start; gap: 16px; }
   .reviews-summary { padding: 28px 24px; }

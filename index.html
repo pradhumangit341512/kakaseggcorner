@@ -3,856 +3,987 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaka's Egg Corner — Jaipur's #1 Egg Specialty</title>
+<title>Kaka's Egg Corner - Jaipur's #1 Egg Specialty | 20+ Egg Dishes</title>
+<meta name="description" content="Kaka's Egg Corner - Jaipur's favourite egg specialty corner in Mansarover. 20+ egg dishes, 5-star Google rating, open 12 PM to 12 AM. Order on Zomato, Swiggy or WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ===== MOBILE MENU ===== -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="toggleMenu()">&#10005;</button>
-  <a href="#menu" onclick="toggleMenu()">Menu</a>
-  <a href="#about" onclick="toggleMenu()">About</a>
-  <a href="#reviews" onclick="toggleMenu()">Reviews</a>
-  <a href="#order" onclick="toggleMenu()">Order</a>
-  <a href="#location" onclick="toggleMenu()">Find Us</a>
-  <a href="tel:+919351200643" class="btn-primary" style="margin-top:8px">&#128222; Call Now</a>
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-egg">
+      <svg width="60" height="72" viewBox="0 0 60 72" fill="none">
+        <ellipse cx="30" cy="40" rx="26" ry="32" fill="#F5A623"/>
+        <ellipse cx="30" cy="38" rx="22" ry="28" fill="#FFD166"/>
+        <ellipse cx="30" cy="36" rx="14" ry="14" fill="#fff"/>
+        <ellipse cx="30" cy="35" rx="10" ry="10" fill="#F5A623"/>
+      </svg>
+    </div>
+    <p class="preloader-text">Kaka's Egg Corner</p>
+  </div>
 </div>
 
 <!-- ===== NAVBAR ===== -->
 <nav id="navbar">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <div class="nav-logo-icon">&#129370;</div>
-        <div class="nav-logo-text">
-          <div class="nav-logo-name">Kaka's</div>
-          <div class="nav-logo-sub">Egg Corner</div>
-        </div>
+  <div class="container nav-container">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <ellipse cx="16" cy="18" rx="12" ry="14" fill="#fff"/>
+          <ellipse cx="16" cy="17" rx="8" ry="8" fill="#F5A623"/>
+          <ellipse cx="16" cy="16" rx="5" ry="5" fill="#FFD166"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-brand">Kaka's</span>
+        <span class="nav-sub">Egg Corner</span>
+      </div>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="tel:+919351200643" class="nav-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       </a>
-      <div class="nav-links">
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#loyalty">Loyalty</a>
-        <a href="#location">Find Us</a>
-      </div>
-      <div class="nav-cta">
-        <a href="tel:+919351200643" class="btn-outline nav-cta-btn">&#128222; Call</a>
-        <a href="#order" class="btn-primary nav-cta-btn">Order Now</a>
-      </div>
-      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <a href="#order" class="btn-order">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        Order Now
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<section id="hero">
-  <div class="hero-blob1"></div>
-  <div class="hero-blob2"></div>
-  <div class="hero-deco1"></div>
-  <div class="hero-deco2"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <!-- Text -->
-      <div>
-        <div class="hero-eyebrow">
-          <div class="hero-rating-pill">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>5.0 &middot; 5,025 Reviews</span>
-          </div>
-        </div>
-        <h1 class="hero-h1">
-          <span class="cursive">Jaipur's Favourite</span>
-          <span>Egg Dishes,</span><br>
-          <span class="highlight">Crafted Fresh</span>
-        </h1>
-        <p class="hero-desc">
-          From sizzling masala omelettes to creamy bhurji and egg biryani — every dish
-          made fresh daily with the finest spices. Dine in or order online at Mansarover, Jaipur.
-        </p>
-        <div class="hero-actions">
-          <a href="#menu" class="btn-primary">&#127859; Explore Menu</a>
-          <a href="#order" class="btn-outline">Order Online &rarr;</a>
-        </div>
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <div class="hero-meta-icon">&#9200;</div>
-            <div class="hero-meta-text"><strong>12 PM – 12 AM</strong>Open every day</div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="hero-meta-icon">&#128205;</div>
-            <div class="hero-meta-text"><strong>Mansarover</strong>Jaipur, Rajasthan</div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="hero-meta-icon">&#127869;</div>
-            <div class="hero-meta-text"><strong>20+ Dishes</strong>Egg specialties</div>
-          </div>
-        </div>
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <ellipse cx="16" cy="18" rx="12" ry="14" fill="#fff"/>
+          <ellipse cx="16" cy="17" rx="8" ry="8" fill="#F5A623"/>
+          <ellipse cx="16" cy="16" rx="5" ry="5" fill="#FFD166"/>
+        </svg>
       </div>
-
-      <!-- Visual -->
-      <div class="hero-visual">
-        <div class="hero-plate-wrap">
-          <div class="hero-plate-bg"></div>
-          <div class="hero-plate-img">
-            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=500&h=500&fit=crop&q=80" alt="Egg Dish">
-          </div>
-
-          <div class="float-card fc-tl">
-            <div class="float-card-emoji">&#127859;</div>
-            <div>
-              <div>Masala Omelette</div>
-              <div class="float-card-sub">Best Seller &middot; &#8377;60</div>
-            </div>
-          </div>
-
-          <div class="float-card fc-tr">
-            <div class="float-card-emoji">&#11088;</div>
-            <div>
-              <div>5.0 Google</div>
-              <div class="float-card-sub">5,025 reviews</div>
-            </div>
-          </div>
-
-          <div class="float-card fc-bl">
-            <div class="float-card-emoji">&#129368;</div>
-            <div>
-              <div>Egg Bhurji</div>
-              <div class="float-card-sub">Fan Favourite &middot; &#8377;50</div>
-            </div>
-          </div>
-
-          <div class="float-card fc-br">
-            <div class="float-card-emoji">&#128757;</div>
-            <div>
-              <div>Free Delivery</div>
-              <div class="float-card-sub">on Swiggy &amp; Zomato</div>
-            </div>
-          </div>
-        </div>
+      <div class="nav-logo-text">
+        <span class="nav-brand">Kaka's</span>
+        <span class="nav-sub">Egg Corner</span>
       </div>
-    </div>
+    </a>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
-</section>
-
-<!-- ===== TICKER ===== -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <div class="ticker-item">&#129370; Fresh Eggs Daily</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#11088; 5.0 Google Rating</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#127859; 20+ Egg Dishes</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#128757; Order on Zomato</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#128293; Open Till Midnight</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#128205; Mansarover, Jaipur</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#129370; Fresh Eggs Daily</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#11088; 5.0 Google Rating</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#127859; 20+ Egg Dishes</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#128757; Order on Swiggy</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#128293; Open Till Midnight</div><div class="ticker-dot"></div>
-    <div class="ticker-item">&#128205; Mansarover, Jaipur</div><div class="ticker-dot"></div>
+  <div class="mobile-menu-links">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About Us</a>
+    <a href="#menu" class="mobile-link">Menu</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="#reviews" class="mobile-link">Reviews</a>
+    <a href="#contact" class="mobile-link">Contact</a>
   </div>
+  <a href="#order" class="btn-order mobile-order-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+    Order Now
+  </a>
 </div>
 
-<!-- ===== STATS ===== -->
-<section id="stats">
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="hero-deco hero-deco-1">
+    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" opacity="0.12">
+      <circle cx="60" cy="60" r="58" stroke="#E8490A" stroke-width="2" stroke-dasharray="8 6"/>
+    </svg>
+  </div>
+  <div class="hero-deco hero-deco-2">
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.08">
+      <circle cx="40" cy="40" r="38" stroke="#F5A623" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="hero-deco hero-deco-3">
+    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" opacity="0.05">
+      <ellipse cx="100" cy="110" rx="80" ry="90" stroke="#E8490A" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <div class="container hero-container">
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open Now - 12 PM to 12 AM
+      </div>
+      <h1 class="hero-title">
+        Jaipur's <span class="text-cursive">Favourite</span><br>
+        Place For <span class="text-highlight">Egg Dishes</span>
+      </h1>
+      <p class="hero-desc">
+        Kaka's Egg Corner offers 20+ freshly crafted egg dishes - from sizzling masala omelettes
+        to creamy bhurji, egg biryani and more. Made fresh daily with the finest spices.
+      </p>
+      <div class="hero-features">
+        <div class="hero-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mansarover, Jaipur
+        </div>
+        <div class="hero-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 93512 00643
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#order" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          Order Now
+        </a>
+        <a href="#menu" class="btn-secondary">
+          Explore Menu
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="hero-trust-text">5.0 Rating | 5,025+ Google Reviews</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&h=600&fit=crop&q=80" alt="Signature Egg Dish at Kaka's Egg Corner" loading="eager">
+        <div class="hero-img-ring"></div>
+      </div>
+      <div class="hero-float-card hfc-1">
+        <div class="hfc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <strong>Open Daily</strong>
+          <span>12 PM - 12 AM</span>
+        </div>
+      </div>
+      <div class="hero-float-card hfc-2">
+        <div class="hfc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div>
+          <strong>5.0 Google</strong>
+          <span>5,025+ reviews</span>
+        </div>
+      </div>
+      <div class="hero-float-card hfc-3">
+        <div class="hfc-icon" style="background:rgba(37,211,102,0.1)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <div>
+          <strong>Free Delivery</strong>
+          <span>Zomato & Swiggy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
+      <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V100H0V40Z" fill="#fff"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<section class="stats-strip">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-item reveal">
-        <div class="stat-num">5.0</div>
+      <div class="stat-card reveal">
+        <div class="stat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="stat-num" data-target="5.0" data-decimal="1">0</div>
         <div class="stat-label">Google Rating</div>
-        <div class="stat-sub">5,025+ reviews</div>
       </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <div class="stat-num">4.6</div>
-        <div class="stat-label">Swiggy Rating</div>
-        <div class="stat-sub">Top rated outlet</div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="stat-num" data-target="5025">0</div>
+        <div class="stat-label">Happy Customers</div>
       </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <div class="stat-num">20+</div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="stat-num" data-target="20">0</div>
         <div class="stat-label">Egg Dishes</div>
-        <div class="stat-sub">Fresh every day</div>
       </div>
-      <div class="stat-item reveal reveal-delay-3">
-        <div class="stat-num">12h</div>
-        <div class="stat-label">Open Daily</div>
-        <div class="stat-sub">12 PM to 12 AM</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-4">
-        <div class="stat-num">&#8377;50</div>
-        <div class="stat-label">Starts From</div>
-        <div class="stat-sub">Best value in Jaipur</div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="stat-num" data-target="12">0</div>
+        <div class="stat-label">Hours Open Daily</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== MENU ===== -->
-<section id="menu" class="section-pad">
+<!-- ===== NEW MENU HIGHLIGHTS ===== -->
+<section id="highlights" class="section highlights-section">
   <div class="container">
-    <div class="menu-header reveal">
-      <span class="tag">&#127869; Our Menu</span>
-      <h2 class="section-title">Every Egg, a <em>Masterpiece</em></h2>
-      <div class="divider"></div>
-      <p class="section-sub" style="margin: 0 auto; text-align: center;">
-        20+ freshly crafted egg dishes — from classic street food to health-forward protein bowls.
-      </p>
+    <div class="section-header reveal">
+      <span class="section-tag">What's New</span>
+      <h2 class="section-title">Our <span class="text-highlight">Special</span> Picks</h2>
+      <p class="section-desc">Check out our freshest additions and crowd favourites</p>
     </div>
-
-    <!-- Tabs -->
-    <div class="menu-tabs">
-      <button class="tab-btn active" onclick="showTab('hero-dishes',this)">&#11088; Hero Dishes</button>
-      <button class="tab-btn" onclick="showTab('combos',this)">&#128176; Value Combos</button>
-      <button class="tab-btn" onclick="showTab('protein',this)">&#128170; Protein &amp; Health</button>
-      <button class="tab-btn" onclick="showTab('specials',this)">&#128293; Chef Specials</button>
-    </div>
-
-    <!-- Hero Dishes -->
-    <div id="hero-dishes" class="menu-panel active">
-      <div class="dishes-grid">
-        <div class="dish-card reveal">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1510693206972-df098062cb71?w=400&h=220&fit=crop&q=80" alt="Masala Omelette">
-            <span class="dish-tag-badge badge-hot">Best Seller</span>
-            <span class="dish-popular-badge">&#11088;</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Masala Omelette</div>
-            <div class="dish-desc">Classic Indian omelette with onions, tomatoes, green chillies &amp; our secret spice blend.</div>
-            <div class="dish-footer">
-              <div class="dish-price">&#8377;60</div>
-              <button class="dish-add-btn">+</button>
-            </div>
-          </div>
+    <div class="highlights-grid">
+      <div class="highlight-card reveal">
+        <div class="highlight-img">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&h=350&fit=crop&q=80" alt="Egg Biryani" loading="lazy">
+          <span class="highlight-badge">Chef's Special</span>
         </div>
-
-        <div class="dish-card reveal reveal-delay-1">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=220&fit=crop&q=80" alt="Egg Bhurji">
-            <span class="dish-tag-badge badge-fav">Fan Fav</span>
-            <span class="dish-popular-badge">&#128293;</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Egg Bhurji</div>
-            <div class="dish-desc">Spiced scrambled eggs with a smoky tadka — the classic Jaipur street-side style.</div>
-            <div class="dish-footer">
-              <div class="dish-price">&#8377;50</div>
-              <button class="dish-add-btn">+</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="dish-card reveal reveal-delay-2">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=220&fit=crop&q=80" alt="Double Egg Fry">
-            <span class="dish-tag-badge badge-new">Must Try</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Double Egg Fry</div>
-            <div class="dish-desc">Two perfectly fried eggs with chilli oil drizzle &amp; toasted bread on the side.</div>
-            <div class="dish-footer">
-              <div class="dish-price">&#8377;70</div>
-              <button class="dish-add-btn">+</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="dish-card reveal reveal-delay-3">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&h=220&fit=crop&q=80" alt="Keema Egg">
-            <span class="dish-tag-badge badge-hot">Popular</span>
-            <span class="dish-popular-badge">&#128175;</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Keema Egg</div>
-            <div class="dish-desc">Minced mutton keema layered with egg — a real Rajasthani flavour bomb.</div>
-            <div class="dish-footer">
-              <div class="dish-price">&#8377;120</div>
-              <button class="dish-add-btn">+</button>
-            </div>
+        <div class="highlight-body">
+          <h3>Egg Biryani</h3>
+          <p>Fragrant basmati with 3 whole eggs - a Rajasthani twist</p>
+          <div class="highlight-footer">
+            <span class="highlight-price">&#8377;160</span>
+            <a href="#order" class="btn-sm">Order Now</a>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Value Combos -->
-    <div id="combos" class="menu-panel">
-      <div class="dishes-grid">
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=400&h=220&fit=crop&q=80" alt="Student Special">
-            <span class="dish-tag-badge badge-deal">&#8377;99 Deal</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Student Special</div>
-            <div class="dish-desc">2 masala omelettes + bread + chai — perfect fuel for students.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;99</div><button class="dish-add-btn">+</button></div>
-          </div>
+      <div class="highlight-card reveal reveal-delay-1">
+        <div class="highlight-img">
+          <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=500&h=350&fit=crop&q=80" alt="4-Egg Challenge" loading="lazy">
+          <span class="highlight-badge badge-red">Challenge</span>
         </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=220&fit=crop&q=80" alt="Egg Feast Box">
-            <span class="dish-tag-badge badge-fav">Value</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Egg Feast Box</div>
-            <div class="dish-desc">Bhurji + Omelette + Paratha + Raita — the full spread in one box.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;149</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=220&fit=crop&q=80" alt="Night Owl Combo">
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Night Owl Combo</div>
-            <div class="dish-desc">Triple egg dish + masala chai — designed for the midnight hunger crowd.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;130</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=220&fit=crop&q=80" alt="Family Platter">
-            <span class="dish-tag-badge badge-new">Share</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Family Platter</div>
-            <div class="dish-desc">6 eggs cooked your style, 4 parathas, 2 chutneys — feeds the whole family.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;220</div><button class="dish-add-btn">+</button></div>
+        <div class="highlight-body">
+          <h3>4-Egg Challenge</h3>
+          <p>Loaded 4-egg masala omelette - dare to finish it alone?</p>
+          <div class="highlight-footer">
+            <span class="highlight-price">&#8377;160</span>
+            <a href="#order" class="btn-sm">Order Now</a>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Protein & Health -->
-    <div id="protein" class="menu-panel">
-      <div class="dishes-grid">
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=220&fit=crop&q=80" alt="Protein Bowl">
-            <span class="dish-tag-badge badge-new">New</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Protein Egg Bowl</div>
-            <div class="dish-desc">Poached eggs on quinoa with greens &amp; olive drizzle — macro-friendly meal.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;110</div><button class="dish-add-btn">+</button></div>
-          </div>
+      <div class="highlight-card reveal reveal-delay-2">
+        <div class="highlight-img">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=350&fit=crop&q=80" alt="Protein Egg Bowl" loading="lazy">
+          <span class="highlight-badge badge-green">Healthy</span>
         </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?w=400&h=220&fit=crop&q=80" alt="Keto Platter">
-            <span class="dish-tag-badge badge-new">Keto</span>
+        <div class="highlight-body">
+          <h3>Protein Egg Bowl</h3>
+          <p>Poached eggs on quinoa with greens - macro-friendly meal</p>
+          <div class="highlight-footer">
+            <span class="highlight-price">&#8377;110</span>
+            <a href="#order" class="btn-sm">Order Now</a>
           </div>
-          <div class="dish-body">
-            <div class="dish-name">Keto Egg Platter</div>
-            <div class="dish-desc">Boiled eggs, avocado salad, no bread — gym-approved, guilt-free eating.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;120</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=400&h=220&fit=crop&q=80" alt="Egg White Omelette">
-            <span class="dish-tag-badge badge-new">Low Cal</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Egg White Omelette</div>
-            <div class="dish-desc">Pure protein — egg whites, seasonal vegetables, minimal oil. Clean eating.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;80</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=220&fit=crop&q=80" alt="Boiled Egg Set">
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Boiled Egg Set (4)</div>
-            <div class="dish-desc">Four perfectly boiled eggs with black salt, pepper &amp; green chutney.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;40</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Chef Specials -->
-    <div id="specials" class="menu-panel">
-      <div class="dishes-grid">
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=220&fit=crop&q=80" alt="Egg Biryani">
-            <span class="dish-tag-badge badge-hot">Special</span>
-            <span class="dish-popular-badge">&#127835;</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Egg Biryani</div>
-            <div class="dish-desc">Fragrant basmati rice with 3 whole eggs — a Rajasthani twist on a classic.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;160</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=400&h=220&fit=crop&q=80" alt="4 Egg Challenge">
-            <span class="dish-tag-badge badge-deal">Challenge</span>
-            <span class="dish-popular-badge">&#128293;</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">4-Egg Challenge</div>
-            <div class="dish-desc">Loaded 4-egg masala omelette — dare to finish it alone? A social media moment!</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;160</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=220&fit=crop&q=80" alt="Egg Curry">
-            <span class="dish-tag-badge badge-hot">Popular</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Egg Curry Rice Box</div>
-            <div class="dish-desc">Rich spicy egg curry with steamed basmati rice — a delivery crowd favourite.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;130</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-        <div class="dish-card">
-          <div class="dish-img-wrap">
-            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=220&fit=crop&q=80" alt="Egg Wrap">
-            <span class="dish-tag-badge badge-new">New</span>
-          </div>
-          <div class="dish-body">
-            <div class="dish-name">Masala Egg Wrap</div>
-            <div class="dish-desc">Bhurji wrapped in soft roti with mint chutney, onions &amp; chaat masala.</div>
-            <div class="dish-footer"><div class="dish-price">&#8377;90</div><button class="dish-add-btn">+</button></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Special Banner -->
-    <div class="special-banner reveal">
-      <div class="special-banner-text">
-        <div class="special-banner-eyebrow">&#127769; Open Every Night</div>
-        <h3>Midnight Hunger?<br>We've Got You Covered!</h3>
-        <p>Open 12 PM to 12 AM — because great food has no curfew.</p>
-      </div>
-      <div class="special-banner-img">&#127769;</div>
-      <a href="tel:+919351200643" class="special-banner-cta">&#128222; Call to Order</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ORDER ONLINE ===== -->
-<section id="order">
-  <div class="container">
-    <div class="order-inner">
-      <div class="reveal">
-        <span class="tag">&#128757; Order Online</span>
-        <h2 class="section-title">Delivered Hot <em>to Your Door</em></h2>
-        <div class="divider"></div>
-        <p class="section-sub">
-          Order through Zomato or Swiggy for quick, fresh delivery. Or ping us directly on WhatsApp for bulk and catering orders.
-        </p>
-        <div class="order-call-box">
-          <div class="order-call-label">&#128222; Call Directly</div>
-          <a href="tel:+919351200643" class="order-call-number">93512 00643</a>
-          <div class="order-call-hours">Available 12 PM – 12 AM daily</div>
-        </div>
-      </div>
-
-
-      <div class="reveal reveal-delay-1">
-        <div class="order-platforms">
-          <a href="https://www.zomato.com" target="_blank" rel="noopener" class="platform-card pc-zomato">
-            <div class="pc-logo"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#E23744"/><path d="M10 14.5c0-.83.67-1.5 1.5-1.5h3c.83 0 1.5.67 1.5 1.5V16h-1.5v-1h-3v10h3v-1H16v1.5c0 .83-.67 1.5-1.5 1.5h-3c-.83 0-1.5-.67-1.5-1.5v-11zm8 0c0-.83.67-1.5 1.5-1.5h3c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5h-3c-.83 0-1.5-.67-1.5-1.5v-11zm1.5.5v10h3V15h-3zm7-.5c0-.83.67-1.5 1.5-1.5h3c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5h-3c-.83 0-1.5-.67-1.5-1.5v-11zm1.5.5v10h3V15h-3z" fill="#fff"/></svg></div>
-            <div class="pc-name">Zomato</div>
-            <div class="pc-rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.1 / 5 &middot; 34 votes</div>
-            <div class="pc-cta"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="12" fill="#fff" opacity="0.2"/><path d="M6 12.5c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v3.5c0 .28-.22.5-.5.5h-1a.5.5 0 01-.5-.5v-3.5zm3-.5c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v4c0 .28-.22.5-.5.5h-1a.5.5 0 01-.5-.5v-4z" fill="#fff"/></svg> Order on Zomato &rarr;</div>
-          </a>
-          <a href="https://www.swiggy.com" target="_blank" rel="noopener" class="platform-card pc-swiggy">
-            <div class="pc-logo"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#FC8019"/><path d="M20 8c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12S26.63 8 20 8zm-1.5 17.5c-1.93 0-3.5-1.57-3.5-3.5 0-1.6 1.08-2.95 2.55-3.36l-.55-3.64h3l-.55 3.64A3.51 3.51 0 0122 22c0 1.93-1.57 3.5-3.5 3.5zm6.5-7h-2v-4h2v4z" fill="#fff"/></svg></div>
-            <div class="pc-name">Swiggy</div>
-            <div class="pc-rating">&#9733;&#9733;&#9733;&#9733;&#189; 4.6 / 5 &middot; Fast delivery</div>
-            <div class="pc-cta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#fff" opacity="0.2"/><path d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm-1 11.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="#fff"/></svg> Order on Swiggy &rarr;</div>
-          </a>
-          <a href="https://wa.me/919351200643?text=Hi%20Kaka's%20Egg%20Corner!%20I'd%20like%20to%20order." target="_blank" rel="noopener" class="platform-card pc-whatsapp">
-            <div class="pc-logo"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#25D366"/><path d="M20 10c-5.52 0-10 4.48-10 10 0 1.76.46 3.41 1.26 4.85L10 30l5.32-1.4A9.93 9.93 0 0020 30c5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.8 14.1c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.11-1.84-.12-.42-.14-.96-.32-1.66-.63-2.94-1.27-4.86-4.24-5-4.44-.15-.2-1.2-1.6-1.2-3.05s.76-2.17 1.03-2.46c.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.51.24.6.83 2.03.9 2.18.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.78 1.29 1.68 2.09 1.15.1 1.58-.26 1.87-.43.28-.17.45-.14.75.09.3.22 1.92 1.28 2.25 1.51.33.24.55.35.63.54.08.2.08 1.14-.16 1.82z" fill="#fff"/></svg></div>
-            <div class="pc-whatsapp-body">
-              <div class="pc-name">WhatsApp Order</div>
-              <div class="pc-rating">Direct orders &middot; Bulk &amp; catering welcome</div>
-              <div class="pc-cta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.41 1.26 4.85L2 22l5.32-1.4A9.93 9.93 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="#fff" opacity="0.3"/></svg> Message on WhatsApp &rarr;</div>
-            </div>
-          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section id="about">
+<!-- ===== POPULAR DISHES ===== -->
+<section id="menu" class="section menu-section">
   <div class="container">
-    <div class="about-inner">
-      <!-- Images -->
-      <div class="about-img-grid reveal">
-        <div class="about-img-card aig-big">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=500&fit=crop&q=80" alt="Food at Kaka's" style="height:100%;min-height:380px">
-          <div class="about-badge">
-            <div class="about-badge-icon">&#11088;</div>
-            <div class="about-badge-text">5.0 Rating<span>5,025+ Reviews</span></div>
+    <div class="section-header reveal">
+      <span class="section-tag">Our Menu</span>
+      <h2 class="section-title">Popular <span class="text-highlight">Dishes</span></h2>
+      <p class="section-desc">20+ freshly crafted egg dishes - from classic street food to health-forward protein bowls</p>
+    </div>
+
+    <div class="menu-tabs reveal">
+      <button class="tab-btn active" data-tab="all">All</button>
+      <button class="tab-btn" data-tab="bestsellers">Best Sellers</button>
+      <button class="tab-btn" data-tab="combos">Value Combos</button>
+      <button class="tab-btn" data-tab="healthy">Protein & Health</button>
+      <button class="tab-btn" data-tab="specials">Chef Specials</button>
+    </div>
+
+    <div class="dishes-grid" id="dishesGrid">
+      <!-- Best Sellers -->
+      <div class="dish-card reveal" data-category="bestsellers">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1510693206972-df098062cb71?w=400&h=260&fit=crop&q=80" alt="Masala Omelette" loading="lazy">
+          <span class="dish-badge">Best Seller</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Masala Omelette</h3>
+          <p class="dish-desc">Classic Indian omelette with onions, tomatoes, green chillies & our secret spice blend.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;60</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
-        </div>
-        <div class="about-img-card">
-          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300&h=200&fit=crop&q=80" alt="Fresh Eggs" style="height:180px">
-        </div>
-        <div class="about-img-card">
-          <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=300&h=200&fit=crop&q=80" alt="Egg Dish" style="height:180px">
         </div>
       </div>
 
-      <!-- Text -->
-      <div class="reveal reveal-delay-1">
-        <span class="tag">&#129370; Our Story</span>
-        <h2 class="section-title">A Love Story<br><em>With Eggs</em></h2>
-        <div class="divider"></div>
+      <div class="dish-card reveal reveal-delay-1" data-category="bestsellers">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=260&fit=crop&q=80" alt="Egg Bhurji" loading="lazy">
+          <span class="dish-badge badge-gold">Fan Fav</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Egg Bhurji</h3>
+          <p class="dish-desc">Spiced scrambled eggs with a smoky tadka - classic Jaipur street-side style.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;50</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal reveal-delay-2" data-category="bestsellers">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=260&fit=crop&q=80" alt="Double Egg Fry" loading="lazy">
+          <span class="dish-badge badge-green">Must Try</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Double Egg Fry</h3>
+          <p class="dish-desc">Two perfectly fried eggs with chilli oil drizzle & toasted bread on the side.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;70</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal reveal-delay-3" data-category="bestsellers">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&h=260&fit=crop&q=80" alt="Keema Egg" loading="lazy">
+          <span class="dish-badge">Popular</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Keema Egg</h3>
+          <p class="dish-desc">Minced mutton keema layered with egg - a real Rajasthani flavour bomb.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;120</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combos -->
+      <div class="dish-card reveal" data-category="combos">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=400&h=260&fit=crop&q=80" alt="Student Special" loading="lazy">
+          <span class="dish-badge badge-red">&#8377;99 Deal</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Student Special</h3>
+          <p class="dish-desc">2 masala omelettes + bread + chai - perfect fuel for students.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;99</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal reveal-delay-1" data-category="combos">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=260&fit=crop&q=80" alt="Egg Feast Box" loading="lazy">
+          <span class="dish-badge badge-gold">Value</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Egg Feast Box</h3>
+          <p class="dish-desc">Bhurji + Omelette + Paratha + Raita - the full spread in one box.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;149</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal reveal-delay-2" data-category="combos">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=260&fit=crop&q=80" alt="Night Owl Combo" loading="lazy">
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Night Owl Combo</h3>
+          <p class="dish-desc">Triple egg dish + masala chai - designed for the midnight hunger crowd.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;130</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal reveal-delay-3" data-category="combos">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=260&fit=crop&q=80" alt="Family Platter" loading="lazy">
+          <span class="dish-badge badge-green">Share</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Family Platter</h3>
+          <p class="dish-desc">6 eggs cooked your style, 4 parathas, 2 chutneys - feeds the whole family.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;220</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Healthy -->
+      <div class="dish-card reveal" data-category="healthy">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=260&fit=crop&q=80" alt="Protein Bowl" loading="lazy">
+          <span class="dish-badge badge-green">New</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Protein Egg Bowl</h3>
+          <p class="dish-desc">Poached eggs on quinoa with greens & olive drizzle - macro-friendly meal.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;110</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal reveal-delay-1" data-category="healthy">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=400&h=260&fit=crop&q=80" alt="Egg White Omelette" loading="lazy">
+          <span class="dish-badge badge-green">Low Cal</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Egg White Omelette</h3>
+          <p class="dish-desc">Pure protein - egg whites, seasonal vegetables, minimal oil. Clean eating.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;80</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specials -->
+      <div class="dish-card reveal" data-category="specials">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=260&fit=crop&q=80" alt="Egg Biryani" loading="lazy">
+          <span class="dish-badge">Special</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Egg Biryani</h3>
+          <p class="dish-desc">Fragrant basmati rice with 3 whole eggs - a Rajasthani twist on a classic.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;160</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal reveal-delay-1" data-category="specials">
+        <div class="dish-img">
+          <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=260&fit=crop&q=80" alt="Egg Curry" loading="lazy">
+          <span class="dish-badge">Popular</span>
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">Egg Curry Rice Box</h3>
+          <p class="dish-desc">Rich spicy egg curry with steamed basmati rice - a delivery crowd favourite.</p>
+          <div class="dish-footer">
+            <span class="dish-price">&#8377;130</span>
+            <a href="#order" class="btn-order-sm">Order Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT US ===== -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images reveal">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=600&fit=crop&q=80" alt="Food at Kaka's Egg Corner" loading="lazy">
+        </div>
+        <div class="about-img-secondary">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300&h=250&fit=crop&q=80" alt="Fresh Eggs" loading="lazy">
+          <div class="about-exp-badge">
+            <strong>5.0</strong>
+            <span>Google Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content reveal reveal-delay-1">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">A Love Story<br>With <span class="text-highlight">Eggs</span></h2>
         <p class="about-text">
-          Kaka's Egg Corner started with a simple belief — that eggs, when made with care
+          Kaka's Egg Corner started with a simple belief - that eggs, when made with care
           and passion, can be the most satisfying food in the world. Located in the vibrant
           Mansarover neighbourhood of Jaipur, we've been cracking eggs and breaking expectations.
         </p>
         <p class="about-text">
           From a humble corner stall to Jaipur's top-rated egg destination with over 5,000
-          glowing reviews — our secret remains unchanged: fresh ingredients, bold spices,
+          glowing reviews - our secret remains unchanged: fresh ingredients, bold spices,
           and genuine love for what we do.
         </p>
-        <div class="usp-list">
-          <div class="usp-item">
-            <div class="usp-icon">&#9200;</div>
-            <div><div class="usp-title">Open 12 Hours Daily</div><div class="usp-desc">12 PM to 12 AM every single day — hunger has no schedule.</div></div>
-          </div>
-          <div class="usp-item">
-            <div class="usp-icon">&#129370;</div>
-            <div><div class="usp-title">Sourced Fresh Every Morning</div><div class="usp-desc">No frozen eggs, no compromises. Freshness is our religion.</div></div>
-          </div>
-          <div class="usp-item">
-            <div class="usp-icon">&#127942;</div>
-            <div><div class="usp-title">Perfect 5-Star Google Rating</div><div class="usp-desc">5,025+ Jaipur residents can't be wrong. Come see why.</div></div>
-          </div>
+        <a href="#menu" class="btn-secondary about-cta">
+          Explore Our Menu
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR STRENGTHS ===== -->
+<section class="section strengths-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">Our <span class="text-highlight">Strengths</span></h2>
+    </div>
+    <div class="strengths-grid">
+      <div class="strength-card reveal">
+        <div class="strength-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <h3>20+ Egg Dishes</h3>
+        <p>From classic omelettes to biryani, wraps, and protein bowls - every egg style covered.</p>
+      </div>
+      <div class="strength-card reveal reveal-delay-1">
+        <div class="strength-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Fresh Every Day</h3>
+        <p>No frozen eggs, no compromises. All eggs sourced fresh every morning from local farms.</p>
+      </div>
+      <div class="strength-card reveal reveal-delay-2">
+        <div class="strength-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Best Taste</h3>
+        <p>Bold spices, authentic flavours, and recipes perfected over years. The taste speaks for itself.</p>
+      </div>
+      <div class="strength-card reveal reveal-delay-3">
+        <div class="strength-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2" ry="2"/><path d="M16 8h4l3 3v5a2 2 0 01-2 2h-1"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Available on Zomato & Swiggy for quick delivery. Hot food at your doorstep in minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Gallery</span>
+      <h2 class="section-title">Food <span class="text-highlight">Gallery</span></h2>
+      <p class="section-desc">A visual feast of our best dishes</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item gi-large reveal">
+        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&h=500&fit=crop&q=80" alt="Signature Dish" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Signature Egg Dish</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1510693206972-df098062cb71?w=400&h=300&fit=crop&q=80" alt="Masala Omelette" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Masala Omelette</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=300&fit=crop&q=80" alt="Egg Bhurji" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Egg Bhurji</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop&q=80" alt="Night Owl Combo" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Night Owl Combo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=300&fit=crop&q=80" alt="Egg Biryani" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Egg Biryani</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop&q=80" alt="Masala Egg Wrap" loading="lazy">
+        <div class="gallery-overlay">
+          <span>Masala Egg Wrap</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== LOYALTY ===== -->
-<section id="loyalty">
+<!-- ===== ORDER ONLINE ===== -->
+<section id="order" class="section order-section">
   <div class="container">
-    <div class="loyalty-inner">
-      <!-- Card visual -->
-      <div class="reveal">
-        <div class="loyalty-card-visual">
-          <div class="loyalty-card-top">
-            <div>
-              <div class="loyalty-card-brand">Kaka's Egg Corner</div>
-              <div class="loyalty-card-subtitle">Loyalty Stamp Card</div>
-            </div>
-            <div class="loyalty-card-badge">&#127873; Collect &amp; Redeem</div>
-          </div>
-          <div class="stamp-grid">
-            <div class="stamp filled">&#127859;</div>
-            <div class="stamp filled">&#129368;</div>
-            <div class="stamp filled">&#127859;</div>
-            <div class="stamp filled">&#129370;</div>
-            <div class="stamp filled">&#127859;</div>
-            <div class="stamp filled">&#129368;</div>
-            <div class="stamp filled">&#127859;</div>
-            <div class="stamp filled">&#129370;</div>
-            <div class="stamp empty"></div>
-            <div class="stamp reward">&#127873;</div>
-          </div>
-          <div class="loyalty-card-footer">
-            <div class="loyalty-card-name">Valued Customer</div>
-            <div class="loyalty-card-expiry">8 of 10 stamps filled</div>
-          </div>
-        </div>
-        <p class="loyalty-card-note">Ask for your free loyalty card at the counter!</p>
-      </div>
+    <div class="section-header reveal">
+      <span class="section-tag">Order Online</span>
+      <h2 class="section-title">Delivered Hot <span class="text-highlight">To Your Door</span></h2>
+      <p class="section-desc">Order through Zomato, Swiggy or directly via WhatsApp</p>
+    </div>
 
-      <!-- Steps -->
-      <div class="reveal reveal-delay-1">
-        <span class="tag">&#127873; Loyalty Program</span>
-        <h2 class="section-title">Eat 10, <em>Get 1 Free!</em></h2>
-        <div class="divider"></div>
-        <p class="section-sub" style="margin-bottom:32px;">
-          Our stamp card rewards your love for eggs. Simply collect 10 stamps and unlock a completely free dish of your choice.
-        </p>
-        <div class="loyalty-steps">
-          <div class="loyalty-step">
-            <div class="step-num">01</div>
-            <div><div class="step-title">Visit &amp; Order Any Dish</div><div class="step-desc">Come in for dine-in and place any order from our menu.</div></div>
-          </div>
-          <div class="loyalty-step">
-            <div class="step-num">02</div>
-            <div><div class="step-title">Collect Your Stamp Card</div><div class="step-desc">Ask our team for a free loyalty card — one stamp per visit.</div></div>
-          </div>
-          <div class="loyalty-step">
-            <div class="step-num">03</div>
-            <div><div class="step-title">Fill All 10 Stamps</div><div class="step-desc">Enjoy 10 visits and collect a stamp each time you dine.</div></div>
-          </div>
-          <div class="loyalty-step">
-            <div class="step-num">04</div>
-            <div><div class="step-title">Redeem Your FREE Dish! &#127881;</div><div class="step-desc">Choose any dish from our menu — completely on the house.</div></div>
-          </div>
+    <div class="order-grid">
+      <a href="https://www.zomato.com" target="_blank" rel="noopener" class="order-card oc-zomato reveal">
+        <div class="oc-logo">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#E23744"/><path d="M14 18h4v12h-4V18zm6 0h4v12h-4V18zm6 0h4v12h-4V18z" fill="#fff" opacity="0.9"/><path d="M13 16h22v2H13v-2z" fill="#fff"/></svg>
         </div>
+        <h3>Zomato</h3>
+        <div class="oc-rating">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          4.1 / 5 &middot; 34 votes
+        </div>
+        <span class="oc-cta">Order on Zomato
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="https://www.swiggy.com" target="_blank" rel="noopener" class="order-card oc-swiggy reveal reveal-delay-1">
+        <div class="oc-logo">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#FC8019"/><path d="M24 12c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12-5.37-12-12-12zm-1.5 17.5c-1.93 0-3.5-1.57-3.5-3.5 0-1.6 1.08-2.95 2.55-3.36l-.55-3.64h3l-.55 3.64A3.51 3.51 0 0126 25.5c0 1.93-1.57 3.5-3.5 3.5z" fill="#fff"/></svg>
+        </div>
+        <h3>Swiggy</h3>
+        <div class="oc-rating">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          4.6 / 5 &middot; Fast delivery
+        </div>
+        <span class="oc-cta">Order on Swiggy
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="https://wa.me/919351200643?text=Hi%20Kaka's%20Egg%20Corner!%20I'd%20like%20to%20order." target="_blank" rel="noopener" class="order-card oc-whatsapp reveal reveal-delay-2">
+        <div class="oc-logo">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#25D366"/><path d="M24 14c-5.52 0-10 4.48-10 10 0 1.76.46 3.41 1.26 4.85L14 34l5.32-1.4A9.93 9.93 0 0024 34c5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.8 14.1c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.11-1.84-.12-.42-.14-.96-.32-1.66-.63-2.94-1.27-4.86-4.24-5-4.44-.15-.2-1.2-1.6-1.2-3.05s.76-2.17 1.03-2.46c.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.51.24.6.83 2.03.9 2.18.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.78 1.29 1.68 2.09 1.15.1 1.58-.26 1.87-.43.28-.17.45-.14.75.09.3.22 1.92 1.28 2.25 1.51.33.24.55.35.63.54.08.2.08 1.14-.16 1.82z" fill="#fff"/></svg>
+        </div>
+        <h3>WhatsApp</h3>
+        <div class="oc-rating">Direct orders &middot; Bulk & catering welcome</div>
+        <span class="oc-cta">Message on WhatsApp
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <div class="order-card oc-phone reveal reveal-delay-3">
+        <div class="oc-logo">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#E8490A"/><path d="M30.8 28.1c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.11-1.84-.12-.42-.14-.96-.32-1.66-.63-2.94-1.27-4.86-4.24-5-4.44-.15-.2-1.2-1.6-1.2-3.05s.76-2.17 1.03-2.46c.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.51.24.6.83 2.03.9 2.18.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.78 1.29 1.68 2.09 1.15.1 1.58-.26 1.87-.43.28-.17.45-.14.75.09.3.22 1.92 1.28 2.25 1.51.33.24.55.35.63.54.08.2.08 1.14-.16 1.82z" fill="#fff"/></svg>
+        </div>
+        <h3>Call Direct</h3>
+        <a href="tel:+919351200643" class="oc-phone-num">+91 93512 00643</a>
+        <div class="oc-rating">Available 12 PM - 12 AM daily</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== REVIEWS ===== -->
-<section id="reviews">
+<section id="reviews" class="section reviews-section">
   <div class="container">
-    <div class="reviews-header reveal">
-      <span class="tag">&#11088; Customer Reviews</span>
-      <h2 class="section-title">What <em>Jaipur is Saying</em></h2>
-      <div class="divider"></div>
-      <p class="section-sub" style="margin: 0 auto; text-align: center;">
-        5,025+ Google reviews. Every dish, every visit — a 5-star experience.
-      </p>
+    <div class="section-header reveal">
+      <span class="section-tag">Testimonials</span>
+      <h2 class="section-title">What <span class="text-highlight">Customers Say</span></h2>
+      <p class="section-desc">5,025+ Google reviews - every visit, a 5-star experience</p>
     </div>
 
     <div class="reviews-grid">
       <div class="review-card reveal">
-        <div class="review-top">
-          <div class="review-avatar">&#128104;</div>
+        <div class="review-header">
+          <div class="review-avatar ra-1">R</div>
           <div>
-            <div class="review-name">Rahul S.</div>
+            <h4 class="review-name">Rahul S.</h4>
             <span class="review-platform rp-google">Google</span>
           </div>
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
         </div>
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="review-text">"Best egg corner in all of Jaipur! The masala omelette is absolutely divine. Been coming here for 3 years and the quality never drops. Highly recommend!"</div>
-        <div class="review-date">2 weeks ago</div>
+        <p class="review-text">"Best egg corner in all of Jaipur! The masala omelette is absolutely divine. Been coming here for 3 years and the quality never drops."</p>
+        <span class="review-date">2 weeks ago</span>
       </div>
+
       <div class="review-card reveal reveal-delay-1">
-        <div class="review-top">
-          <div class="review-avatar">&#128105;</div>
+        <div class="review-header">
+          <div class="review-avatar ra-2">P</div>
           <div>
-            <div class="review-name">Priya M.</div>
+            <h4 class="review-name">Priya M.</h4>
             <span class="review-platform rp-swiggy">Swiggy</span>
           </div>
-        </div>
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="review-text">"Ordered the Egg Bhurji and Family Platter on Swiggy — arrived hot and fresh. Packaging was neat. The flavours are so authentic. Will definitely reorder!"</div>
-        <div class="review-date">1 month ago</div>
-      </div>
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-top">
-          <div class="review-avatar">&#128104;&#8205;&#128188;</div>
-          <div>
-            <div class="review-name">Amit K.</div>
-            <span class="review-platform rp-google">Google</span>
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
         </div>
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="review-text">"Late night hunger sorted! Open till midnight is a real blessing. The keema egg is next level. Kaka bhai always makes it with genuine love and care."</div>
-        <div class="review-date">3 weeks ago</div>
+        <p class="review-text">"Ordered the Egg Bhurji and Family Platter on Swiggy - arrived hot and fresh. Packaging was neat. The flavours are so authentic!"</p>
+        <span class="review-date">1 month ago</span>
       </div>
+
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-header">
+          <div class="review-avatar ra-3">A</div>
+          <div>
+            <h4 class="review-name">Amit K.</h4>
+            <span class="review-platform rp-google">Google</span>
+          </div>
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+        <p class="review-text">"Late night hunger sorted! Open till midnight is a real blessing. The keema egg is next level. Kaka bhai always makes it with genuine love."</p>
+        <span class="review-date">3 weeks ago</span>
+      </div>
+
       <div class="review-card reveal">
-        <div class="review-top">
-          <div class="review-avatar">&#129489;</div>
+        <div class="review-header">
+          <div class="review-avatar ra-4">S</div>
           <div>
-            <div class="review-name">Sneha R.</div>
+            <h4 class="review-name">Sneha R.</h4>
             <span class="review-platform rp-swiggy">Swiggy</span>
           </div>
-        </div>
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="review-text">"The protein egg bowl is my daily go-to after gym. Affordable, healthy, and absolutely delicious. No compromise on quality whatsoever. 10/10!"</div>
-        <div class="review-date">5 days ago</div>
-      </div>
-      <div class="review-card reveal reveal-delay-1">
-        <div class="review-top">
-          <div class="review-avatar">&#128104;&#8205;&#128105;&#8205;&#128102;</div>
-          <div>
-            <div class="review-name">Deepak V.</div>
-            <span class="review-platform rp-google">Google</span>
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
         </div>
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="review-text">"Brought my whole family here on Sunday. The 4-Egg Challenge is real — nobody could finish it alone! Great food, great atmosphere. Coming back next week."</div>
-        <div class="review-date">1 week ago</div>
+        <p class="review-text">"The protein egg bowl is my daily go-to after gym. Affordable, healthy, and absolutely delicious. No compromise on quality. 10/10!"</p>
+        <span class="review-date">5 days ago</span>
       </div>
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-top">
-          <div class="review-avatar">&#128105;&#8205;&#127859;</div>
+
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-header">
+          <div class="review-avatar ra-5">D</div>
           <div>
-            <div class="review-name">Kavita T.</div>
+            <h4 class="review-name">Deepak V.</h4>
+            <span class="review-platform rp-google">Google</span>
+          </div>
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+        <p class="review-text">"Brought my whole family here on Sunday. The 4-Egg Challenge is real - nobody could finish it alone! Great food, great atmosphere."</p>
+        <span class="review-date">1 week ago</span>
+      </div>
+
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-header">
+          <div class="review-avatar ra-6">K</div>
+          <div>
+            <h4 class="review-name">Kavita T.</h4>
             <span class="review-platform rp-zomato">Zomato</span>
           </div>
+          <div class="review-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
         </div>
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="review-text">"Simple, clean, honest food. In a city full of fancy restaurants, this reminds you why street food is always the best. Pure soul in every bite!"</div>
-        <div class="review-date">2 months ago</div>
-      </div>
-    </div>
-
-    <div class="reviews-summary reveal">
-      <div class="rs-item">
-        <div class="rs-num">5.0</div>
-        <div class="rs-label">&#11088; Google Rating</div>
-      </div>
-      <div class="rs-divider"></div>
-      <div class="rs-item">
-        <div class="rs-num">5,025+</div>
-        <div class="rs-label">Total Reviews</div>
-      </div>
-      <div class="rs-divider"></div>
-      <div class="rs-item">
-        <div class="rs-num">4.6</div>
-        <div class="rs-label">&#128757; Swiggy Rating</div>
-      </div>
-      <div class="rs-divider"></div>
-      <div class="rs-item">
-        <div class="rs-num">4.1</div>
-        <div class="rs-label">&#127869; Zomato Rating</div>
+        <p class="review-text">"Simple, clean, honest food. In a city full of fancy restaurants, this reminds you why street food is always the best. Pure soul in every bite!"</p>
+        <span class="review-date">2 months ago</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== LOCATION ===== -->
-<section id="location">
+<!-- ===== CONTACT / LOCATION ===== -->
+<section id="contact" class="section contact-section">
   <div class="container">
-    <div style="text-align:center; margin-bottom:48px;" class="reveal">
-      <span class="tag">&#128205; Find Us</span>
-      <h2 class="section-title">Come Visit <em>Us!</em></h2>
-      <div class="divider" style="margin: 16px auto 0;"></div>
+    <div class="section-header reveal">
+      <span class="section-tag">Find Us</span>
+      <h2 class="section-title">Come <span class="text-highlight">Visit Us</span></h2>
     </div>
-    <div class="location-inner">
-      <div class="location-info reveal">
-        <div class="info-card">
-          <div class="info-icon">&#128205;</div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-card">
+          <div class="cc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div>
-            <div class="info-label">Address</div>
-            <div class="info-value">Kharbas Path, Hanuman Marg,<br>Mansarover, Jaipur, RJ 302020</div>
-            <a href="https://maps.google.com/?q=Kaka's+Egg+Corner+Mansarover+Jaipur" target="_blank" class="info-action">Get Directions &rarr;</a>
+            <h4>Address</h4>
+            <p>Kharbas Path, Hanuman Marg,<br>Mansarover, Jaipur, RJ 302020</p>
+            <a href="https://maps.google.com/?q=Kaka's+Egg+Corner+Mansarover+Jaipur" target="_blank" class="cc-link">Get Directions
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
         </div>
-        <div class="info-card">
-          <div class="info-icon">&#9200;</div>
+        <div class="contact-card">
+          <div class="cc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
           <div>
-            <div class="info-label">Opening Hours</div>
-            <div class="info-value">12:00 PM – 12:00 AM<br>Open 7 Days a Week</div>
-            <div class="open-badge">&#128994; Open Today</div>
+            <h4>Opening Hours</h4>
+            <p>12:00 PM - 12:00 AM<br>Open 7 Days a Week</p>
+            <span class="cc-open-badge">Open Now</span>
           </div>
         </div>
-        <div class="info-card">
-          <div class="info-icon">&#128222;</div>
-          <div>
-            <div class="info-label">Phone</div>
-            <div class="info-value"><a href="tel:+919351200643" class="info-phone">93512 00643</a></div>
-            <a href="tel:+919351200643" class="info-action">Call Now &rarr;</a>
+        <div class="contact-card">
+          <div class="cc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8490A" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           </div>
-        </div>
-        <div class="info-card">
-          <div class="info-icon">&#128757;</div>
           <div>
-            <div class="info-label">Order Online</div>
-            <div class="info-value">Available on Zomato &amp; Swiggy</div>
-            <a href="#order" class="info-action">Order Now &rarr;</a>
+            <h4>Phone</h4>
+            <a href="tel:+919351200643" class="cc-phone">+91 93512 00643</a>
+            <a href="https://wa.me/919351200643" target="_blank" class="cc-link">WhatsApp Us
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
         </div>
       </div>
-      <div class="map-wrap reveal reveal-delay-1">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.4089787313337!2d75.74751497603647!3d26.858744362406654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5006a1e3eb3%3A0x4aacf949392303f0!2sKaka&#39;s%20Egg%20Corner!5e0!3m2!1sen!2sin!4v1775685760914!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" > </iframe>
+      <div class="contact-map reveal reveal-delay-1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.4089787313337!2d75.74751497603647!3d26.858744362406654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5006a1e3eb3%3A0x4aacf949392303f0!2sKaka&#39;s%20Egg%20Corner!5e0!3m2!1sen!2sin!4v1775685760914!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kaka's Egg Corner Location"></iframe>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-icon">&#129370;</div>
-          <div>
-            <div class="footer-logo-name">Kaka's</div>
-            <div class="footer-logo-sub">Egg Corner</div>
+        <a href="#" class="nav-logo footer-logo">
+          <div class="nav-logo-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <ellipse cx="16" cy="18" rx="12" ry="14" fill="#fff"/>
+              <ellipse cx="16" cy="17" rx="8" ry="8" fill="#F5A623"/>
+              <ellipse cx="16" cy="16" rx="5" ry="5" fill="#FFD166"/>
+            </svg>
           </div>
-        </div>
-        <p class="footer-desc">
-          Jaipur's most loved egg specialty corner. Serving bold, fresh, and authentic egg dishes since day one. Come hungry, leave happy.
-        </p>
+          <div class="nav-logo-text">
+            <span class="nav-brand">Kaka's</span>
+            <span class="nav-sub">Egg Corner</span>
+          </div>
+        </a>
+        <p class="footer-desc">Jaipur's most loved egg specialty corner. Serving bold, fresh, and authentic egg dishes since day one. Come hungry, leave happy.</p>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/" target="_blank" class="social-btn" title="Instagram">&#128248;</a>
-          <a href="https://wa.me/919351200643" target="_blank" class="social-btn" title="WhatsApp">&#128172;</a>
-          <a href="https://www.zomato.com" target="_blank" class="social-btn" title="Zomato">&#127869;</a>
-          <a href="https://www.swiggy.com" target="_blank" class="social-btn" title="Swiggy">&#128757;</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/919351200643" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </a>
+          <a href="https://maps.google.com/?q=Kaka's+Egg+Corner+Mansarover+Jaipur" target="_blank" rel="noopener" class="social-btn" aria-label="Google Maps">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
         </div>
       </div>
 
-      <div>
-        <div class="footer-heading">Quick Links</div>
-        <div class="footer-links">
-          <a href="#menu">Our Menu</a>
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <nav class="footer-links">
+          <a href="#home">Home</a>
           <a href="#about">About Us</a>
+          <a href="#menu">Our Menu</a>
+          <a href="#gallery">Gallery</a>
           <a href="#reviews">Reviews</a>
-          <a href="#loyalty">Loyalty Card</a>
           <a href="#order">Order Online</a>
-          <a href="#location">Find Us</a>
-        </div>
+        </nav>
       </div>
 
-      <div>
-        <div class="footer-heading">Our Menu</div>
-        <div class="footer-links">
-          <a href="#menu">Hero Dishes</a>
-          <a href="#menu">Value Combos</a>
-          <a href="#menu">Protein Bowls</a>
-          <a href="#menu">Chef Specials</a>
+      <div class="footer-col">
+        <h4 class="footer-heading">Top Items</h4>
+        <nav class="footer-links">
+          <a href="#menu">Masala Omelette</a>
+          <a href="#menu">Egg Bhurji</a>
           <a href="#menu">Egg Biryani</a>
-          <a href="#menu">Catering</a>
-        </div>
+          <a href="#menu">Keema Egg</a>
+          <a href="#menu">Protein Bowl</a>
+          <a href="#menu">Family Platter</a>
+        </nav>
       </div>
 
-      <div>
-        <div class="footer-heading">Contact Us</div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact Us</h4>
         <div class="footer-contact">
           <div class="fc-item">
-            <div class="fc-icon">&#128222;</div>
-            <div class="fc-text"><a href="tel:+919351200643" style="color:rgba(255,255,255,0.45)">+91 93512 00643</a></div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+919351200643">+91 93512 00643</a>
           </div>
           <div class="fc-item">
-            <div class="fc-icon">&#128205;</div>
-            <div class="fc-text">Kharbas Path, Hanuman Marg,<br>Mansarover, Jaipur 302020</div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Kharbas Path, Hanuman Marg, Mansarover, Jaipur 302020</span>
           </div>
           <div class="fc-item">
-            <div class="fc-icon">&#9200;</div>
-            <div class="fc-text">12:00 PM – 12:00 AM<br>Open Every Day</div>
-          </div>
-          <div class="fc-item">
-            <div class="fc-icon">&#128172;</div>
-            <div class="fc-text"><a href="https://wa.me/919351200643" target="_blank" style="color:var(--whatsapp)">WhatsApp Us</a></div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>12 PM - 12 AM, Every Day</span>
           </div>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div class="footer-copy">&copy; 2026 Kaka's Egg Corner. All rights reserved. Mansarover, Jaipur.</div>
+      <p>&copy; 2025 Kaka's Egg Corner. All rights reserved. Mansarover, Jaipur.</p>
       <div class="footer-badges">
-        <span class="footer-badge fb-z">Zomato 4.1 &#9733;</span>
-        <span class="footer-badge fb-s">Swiggy 4.6 &#9733;</span>
-        <span class="footer-badge fb-g">Google 5.0 &#9733;</span>
+        <span class="fb fb-zomato">Zomato 4.1</span>
+        <span class="fb fb-swiggy">Swiggy 4.6</span>
+        <span class="fb fb-google">Google 5.0</span>
       </div>
     </div>
   </div>
 </footer>
 
 <!-- ===== BACK TO TOP ===== -->
-<a href="#" id="backToTop" title="Back to top">&uarr;</a>
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
 
 <script src="script.js"></script>
 </body>

@@ -209,21 +209,37 @@
   });
 
   // ===== PARALLAX HERO DECORATIONS =====
+  // Only enable on pointer-capable devices wider than 768px.
+  // Re-evaluate on resize so rotating a tablet doesn't leave stale state.
   var heroSection = document.querySelector('.hero');
   var deco1 = document.querySelector('.hero-deco-1');
   var deco2 = document.querySelector('.hero-deco-2');
 
-  if (heroSection && deco1 && deco2 && window.innerWidth > 768) {
-    heroSection.addEventListener('mousemove', function(e) {
-      var rect = heroSection.getBoundingClientRect();
-      var x = (e.clientX - rect.left) / rect.width - 0.5;
-      var y = (e.clientY - rect.top) / rect.height - 0.5;
-
-      requestAnimationFrame(function() {
-        deco1.style.transform = 'translate(' + (x * 20) + 'px, ' + (y * 15) + 'px)';
-        deco2.style.transform = 'translate(' + (x * -15) + 'px, ' + (y * -10) + 'px)';
-      });
+  function handleHeroParallax(e) {
+    var rect = heroSection.getBoundingClientRect();
+    var x = (e.clientX - rect.left) / rect.width - 0.5;
+    var y = (e.clientY - rect.top) / rect.height - 0.5;
+    requestAnimationFrame(function() {
+      deco1.style.transform = 'translate(' + (x * 20) + 'px, ' + (y * 15) + 'px)';
+      deco2.style.transform = 'translate(' + (x * -15) + 'px, ' + (y * -10) + 'px)';
     });
   }
+
+  var parallaxBound = false;
+  function syncParallax() {
+    if (!heroSection || !deco1 || !deco2) return;
+    var wantParallax = window.matchMedia('(min-width: 961px) and (hover: hover) and (pointer: fine)').matches;
+    if (wantParallax && !parallaxBound) {
+      heroSection.addEventListener('mousemove', handleHeroParallax);
+      parallaxBound = true;
+    } else if (!wantParallax && parallaxBound) {
+      heroSection.removeEventListener('mousemove', handleHeroParallax);
+      deco1.style.transform = '';
+      deco2.style.transform = '';
+      parallaxBound = false;
+    }
+  }
+  syncParallax();
+  window.addEventListener('resize', syncParallax, { passive: true });
 
 })();
